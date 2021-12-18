@@ -66,8 +66,8 @@ Not sure what Rock, Paper, Scissors, Lizard, Spock is? [Check out this clip from
 
 ### Links
 
-- Solution URL: [Github Respository](https://github.com/jordan-na/country-search-api-single-page.git)
-- Live Site URL: [Hosted on Github Pages](https://jordan-na.github.io/country-search-api-single-page/)
+- Solution URL: [Github Respository](https://github.com/jordan-na/rock-paper-scissors-spock-lizard)
+- Live Site URL: [Hosted on Github Pages](https://jordan-na.github.io/rock-paper-scissors-spock-lizard/)
 
 ## My process
 
