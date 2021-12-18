@@ -12,8 +12,8 @@ export const audioController = (() => {
    const softenedMusicVolume = 0.3;
 
    const sfxVolume = document.querySelector("#sfx-volume");
-   const winSfx = new Audio("../../audio/win.wav");
-   const loseSfx = new Audio("../../audio/lose.wav");
+   const winSfx = new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/win.wav");
+   const loseSfx = new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/lose.wav");
 
    const playMusic = () => music[musicIndex].play();
 
