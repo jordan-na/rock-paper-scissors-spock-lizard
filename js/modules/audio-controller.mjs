@@ -7,19 +7,26 @@ export const audioController = (() => {
       new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/techno.wav"),
       new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/safari.wav"),
    ];
-   music.forEach((m) => (m.loop = true));
+   music.forEach((m) => {
+      m.loop = true;
+      m.volume = 0;
+   });
    let musicIndex = 0;
    const softenedMusicVolume = 0.3;
 
    const sfxVolume = document.querySelector("#sfx-volume");
    const winSfx = new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/win.wav");
+   winSfx.volume = 0;
+   winSfx.muted = true;
    const loseSfx = new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/lose.wav");
+   loseSfx.volume = 0;
+   loseSfx.muted = true;
 
    const playMusic = () => music[musicIndex].play();
 
    const pauseMusic = () => music[musicIndex].pause();
 
-   const setMusicVolume = (value) => (music[musicIndex].volume = value);
+   const setMusicVolume = (value) => music.forEach((m) => (m.volume = value));
 
    const updateMusicVolume = () => {
       playMusic();
