@@ -55,14 +55,14 @@ export const uiController = (() => {
 
    const animateSelectedMove = (elem, duration) => {
       return new Promise((resolve, reject) => {
-         const middleX = moveBtnsContainer.getBoundingClientRect().right - moveBtnsContainer.offsetWidth / 2;
-         const middleY = moveBtnsContainer.getBoundingClientRect().bottom - moveBtnsContainer.offsetHeight / 2;
-         const deltaX = elem.getBoundingClientRect().right - middleX - elem.offsetWidth / 2;
-         const deltaY = elem.getBoundingClientRect().bottom - middleY - elem.offsetHeight / 2;
          let moveToCenter;
-         if (deltaX === 0) {
-            moveToCenter = `translate(calc(${-deltaX}px - 50%), ${-deltaY}px)`;
+         const middleY = moveBtnsContainer.getBoundingClientRect().bottom - moveBtnsContainer.offsetHeight / 2;
+         const deltaY = elem.getBoundingClientRect().bottom - middleY - elem.offsetHeight / 2;
+         if(elem.id === "scissors-btn-container") {
+            moveToCenter = `translate(calc(0px - 50%), ${-deltaY}px)`;
          } else {
+            const middleX = moveBtnsContainer.getBoundingClientRect().right - moveBtnsContainer.offsetWidth / 2;
+            const deltaX = elem.getBoundingClientRect().right - middleX - elem.offsetWidth / 2;
             moveToCenter = `translate(${-deltaX}px, ${-deltaY}px)`;
          }
          const scale = " scale(1.1)";
