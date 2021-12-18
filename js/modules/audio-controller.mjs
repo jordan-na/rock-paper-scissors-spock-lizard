@@ -1,11 +1,11 @@
 export const audioController = (() => {
    const musicVolume = document.querySelector("#music-volume");
    const music = [
-      new Audio("../../audio/peaceful.mp3"),
-      new Audio("../../audio/intense.wav"),
-      new Audio("../../audio/focused.wav"),
-      new Audio("../../audio/techno.wav"),
-      new Audio("../../audio/safari.wav"),
+      new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/peaceful.mp3"),
+      new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/intense.wav"),
+      new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/focused.wav"),
+      new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/techno.wav"),
+      new Audio("https://cdn.rawgit.com/jordan-na/rock-paper-scissors-spock-lizard/main/audio/safari.wav"),
    ];
    music.forEach((m) => (m.loop = true));
    let musicIndex = 0;
